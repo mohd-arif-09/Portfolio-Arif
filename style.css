@@ -1,0 +1,631 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+:root{
+    /* --yellow:#00b7ff; */
+    --yellow:rgb(67, 166, 242);
+}
+*{
+    font-family: "Nunito", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+*::selection{
+    background: var(--yellow);
+    color: #333;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+html::-webkit-scrollbar{
+    width: 1.4rem;
+}
+html::-webkit-scrollbar-track{
+    background: #222;
+}
+html::-webkit-scrollbar-thumb{
+    background: var(--yellow);
+}
+body{
+    background-image: url(images/body.jpg);
+        background-size: cover;                             /* Ensures the image covers the entire background */
+        background-position: right;                        /* Centers the image */
+        background-repeat: no-repeat;                       /* Prevents image repeat */
+        background-attachment: fixed;                       /* Keeps the image fixed when scrolling (optional) */   
+        overflow-x: none;
+        padding-left: 35rem;
+ 
+}
+section{
+    min-height: 100vh;
+    padding: 1rem;
+}
+.btn{
+    padding: .7rem 3rem;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+.btn i{
+    padding: 0 .5rem;
+    font-size: 1.8rem;
+}
+.btn:hover{
+    background: var(--yellow);
+}
+.heading{
+    text-align: center;
+    margin: 0 6rem;
+    font-size: 4rem;
+    padding: 1rem;
+    border-bottom: 0.3rem solid#fff4;
+    color: #fff;
+    
+
+}
+.heading span{
+    color: var(--yellow);
+}
+header{
+    position: fixed;
+    top: 0;left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 35rem;
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+header .user img{
+    height: 17rem;
+    width: 17rem;
+    margin-top: 1rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: .7rem solid var(--yellow);
+}
+header .user .name{
+    font-size: 3.5rem;
+    color: var(--yellow);
+}
+header .user .post{
+    font-size: 2rem;
+    color:yellow;
+    border-bottom: 0.3rem solid rgb(255, 255, 255);
+}
+header .navbar{
+    width: 100%;
+   
+}
+header .navbar ul{
+    list-style: none;
+    padding: 1rem 3rem;
+  
+}
+header .navbar ul li a{
+    display: block;
+    padding: 1rem;
+    /* margin: 1.5rem 0; */
+    /* background: #333; */
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    /* border-radius: 5rem; */
+}
+header .navbar ul li a:hover{   
+    color: rgb(249, 14, 210); /* Hover color */
+    transform: scale(1.1); /* Optional: slight zoom effect */
+    text-decoration: underline; /* Optional: underline on hover */
+}
+#menu{
+    position: fixed;
+    top: 2rem; 
+    right: 2rem;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;
+    z-index: 1000;
+    display: none;
+}
+.mobile-user {
+    display: none;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.mobile-user img {
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: .7rem solid var(--yellow);
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Aligns content to the left */
+    padding: 5rem 10%; /* General padding */
+    background-image: url(images/homebg.jpg);
+    background-size: cover; /* Ensure the image scales proportionally */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Full viewport height */
+    box-sizing: border-box; /* Include padding in height/width */
+}
+
+.home h3{
+    font-size: 2.5rem;
+    color: black;
+}
+.home h1{
+    font-size: 5rem;
+    color: black;
+}
+.home span{
+    color: yellow
+}
+.home p{
+    font-size: 2rem;
+    color: white;
+    padding: 1rem 0;
+}
+.about .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+.about .row .info{
+    flex: 1 1 48rem;
+    padding: 2rem 1rem;
+    padding-left: 6rem;
+}
+.about .row .info h3{
+    font-size: 22px;
+    color: red;
+    padding: 1rem 0;
+    font-weight: bold;
+
+    /* font-weight: normal; */
+}
+.about .row .info h3 span{
+    color: white;
+    padding: 0 .5rem;
+
+}
+.about .row .counter{
+    flex: 1 1 48rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.about .row .counter .box{
+    width: 20rem;
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem;
+}
+
+.about .row .counter .box span{
+    font-size: 4rem;
+    color: var(--yellow);
+}
+.about .row .counter .box h3{
+    font-size: 2rem;
+    color: #fff;
+}
+.education .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    padding-left: 3rem;
+}
+.education .box-container .box{
+    width: 27rem;
+    margin: 4rem 1rem;
+    padding-left: 4rem;
+    border-left: .2rem solid #fff;
+    position: relative;
+}
+.education .box-container .box span{
+    font-size: 1.3rem;
+    background: #222;
+    color: #fff;
+    border-radius: 5rem;
+    padding: .5rem 2.5rem;
+}
+.education .box-container .box h3{
+    font-size: 2rem;
+    color: #fff;
+    padding-top: 1.5rem;
+}
+.education .box-container .box p{
+    font-size: 1.4rem;
+    color: black;
+    padding: 1rem 0;
+}
+.education .box-container .box i{
+    position: absolute;
+    top: -1.5rem;
+    left: -2.5rem;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    background: var(--yellow);
+}
+.portfolio .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+.portfolio .box-container .box{
+    width: 26rem;
+    border-radius: 1rem;
+    margin: 2rem;
+    overflow: hidden;
+    text-align: center;
+}
+.portfolio .box-container .box img{
+    width: 100%;
+    height: 20rem;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+.portfolio .box-container .project-name{
+    font-size: 1.6rem;
+    color: #fff;
+    margin-top: 1.7rem;
+    font-weight: bold;
+}
+.portfolio .box-container .project-link{
+    display: inline-block;
+    font-size: 1.4rem;
+    color: var(--yellow);
+    margin-top: 1rem;
+    text-decoration: none;
+    border: 2px solid var(--yellow);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.portfolio .box-container .project-link:hover{
+    background-color: var(--yellow);
+    color: #333;
+}
+.portfolio .box-container .box:hover img{
+    transform: scale(1.2);
+}
+.contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contact .row .content{
+    flex: 1 1 30rem;
+    padding: 4rem;
+    padding-bottom: 0;
+}
+.contact .row form{
+    flex: 1 1 45rem;
+    padding: 2rem;
+    margin: 2rem;
+    margin-bottom: 4rem;
+}
+.contact .row form .box{
+    padding: 1.5rem;
+    margin: 1rem 0;
+    background: #333;
+    color: #fff;
+    text-transform: none;
+    font-size: 1.7rem;
+    width: 100%;
+}
+.contact .row form .box::placeholder{
+    text-transform: capitalize;
+}
+.contact .row form .message{
+    height: 15rem;
+    resize: none;
+}
+.contact .row .content .title{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+.contact .row .content .info h3{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: #eee;
+    padding: 1rem 0;
+    font-weight: normal;
+}
+.contact .row .content .info h3 i{
+    padding-right:1rem;
+    color: var(--yellow);
+}
+
+/* skills code  */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top:5%;
+    text-align: center;
+}
+
+.skills-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 2;
+    color: var(--yellow);
+}
+
+.skills-subtitle {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #999;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+
+    
+}
+
+.skill {
+     flex: 1 1 calc(50% - 20px); /*Adjust for two columns */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skill span {
+    flex: 1;
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+}
+.skill img {
+    width: 40px; /* Adjust this value as needed */
+    height: 40px; /* Adjust this value as needed */
+    margin-right: 10px; /* Optional: Adds some space between the image and the text */
+    vertical-align: middle; /* Aligns the image vertically with the text */
+}
+
+
+.progress-bar {
+    flex: 3;
+    background: #333;
+    border-radius: 5px;
+    height: 12px;
+    margin: 0 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress {
+    background: yellow;
+    height: 100%;
+    border-radius: 5px 0 0 5px;
+}
+
+.percentage {
+    flex: 1;
+    text-align: right;
+    font-size: 18x;
+}
+
+
+.sidebar {
+  /*  background-image: url('images/bg.jpg');   Correct way to specify the image */
+    background-size: cover;                             /* Ensures the image covers the entire background */
+    background-position: center;                        /* Centers the image */
+    background-repeat: no-repeat;                       /* Prevents image repeat */
+    background-attachment: fixed;                       /* Keeps the image fixed when scrolling (optional) */
+}
+
+/* Achievements Section */
+.achievements {
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    display: block;
+    padding: 20px; /* Add spacing from all sides */
+    /* flex-direction: column;
+    justify-content: center; */
+    align-items: center;
+    padding: 20px; /* Add spacing from all sides */
+    box-sizing: border-box; /* Ensure padding doesn’t affect total width/height */
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Slider Styles */
+.slider-container {
+    width: 100%;
+    height: calc(100% - 60px); /* Adjust height for padding and title spacing */
+    max-width: 1200px; /* Optional: Limit the container width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 10px; /* Add inner spacing */
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+.image-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 8px; /* Optional: Add rounded corners */
+    position: relative;
+}
+
+.slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures the image covers the container */
+    display: block;
+    background-color: transparent;
+}
+
+/* Navigation Buttons */
+.slider-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    opacity: 0.8;
+}
+
+.slider-btn:hover {
+    background-color: #0056b3;
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1); /* Scale up on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+.slider-btn.left {
+    left: 20px; /* Add spacing from the left */
+}
+
+.slider-btn.right {
+    right: 20px; /* Add spacing from the right */
+}
+
+/* Media Query for smaller devices (like phones) */
+
+@media (max-width:1200px){
+    html{
+        font-size: 55%;
+    } 
+    .home {
+        padding: 1rem 4rem;
+        background-image: url(images/homebg.jpg); /* Medium resolution image */
+        background-size: cover;
+        background-position: center;
+    }
+    
+}
+@media (max-width:991px){
+    header{
+        left: -120%;
+    }
+    #menu{
+        display: block;
+    }
+    header.toggle{
+        left: 0%;
+    }
+    body{
+        padding: 0;
+    }
+    .portfolio .box-container .box{
+        width: 100%;
+    }
+    .home {
+        background-image: url(images/homebg.jpg); /* Medium resolution image */
+        background-size: cover;
+        background-position: center;
+    }
+}
+@media (max-width:768px){
+    html{
+        font-size: 50%;
+    }
+    .mobile-user {
+        display: block;
+    }
+
+    .home {
+        padding: 0 2rem;
+        background-image: url(images/homebg.jpg); /* Medium resolution image */
+        background-size: cover;
+        background-position: center;
+    }
+    .slider-btn {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+    .skill {
+        flex: 1 1 100%; /* Stack skills in a single column */
+    }
+}
+@media (max-width:400px){
+    header{
+        width: 100vw;
+    }
+    .heading{
+        margin: 0 3rem;
+    }
+    .about .row .counter .box{
+        width: 100%;
+    }
+    .education .box-container .box{
+        width: 100%;
+    }
+    .portfolio .box-container .box{
+        width: 100%;
+    }
+    .contact .row form{
+        margin:3rem;
+    }
+    .home {
+        background-image: url(images/homebg.jpg); /* Medium resolution image */
+        background-size: cover;
+        background-position: center;
+    }
+}
